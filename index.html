@@ -1,0 +1,80 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Form Validation</title>
+</head>
+<body>
+  <style media="screen">
+    *{
+      padding:0%;
+      margin:0%;
+    }
+    html,body{
+      height:100%;
+      width:100%;
+    }
+    .box{
+      background-color:#15BDEF;
+      height:100%;
+      width:100%;
+    }
+    .box2{
+      background-color:white;
+      border-radius:50px;
+      display:inline-block;
+      height:70%;
+      width:30%;
+      text-align:center;
+      margin-left:35%;
+      margin-top:5%;
+    }
+    .incon{
+      padding: 10px;
+      padding-left: 100px;
+      border-radius: 30px;
+    }
+    .but{
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+  </style>
+  <div class="box">
+    <div class="box2">
+      <h1>Sign Up</h1><br />
+      <input id="n" class="incon" placeholder="Name" type="text" /><br></br>
+      <input id="e" class="incon" placeholder="E-mail" type="email" /><br></br>
+      <input id="p" class="incon"  placeholder="Password" type="password" /><br><br>
+      <input id="c" type="checkbox" class="check"><label> I read and agree to the terms and conditions</label><br><br><br>
+      <button id="b" onclick="formss()" class="but">CREATE ACCOUNT</button><br><br>
+      <p>Already have an account ? <a href="_blank">Sign in</a></p>
+    </div>
+
+  </div>
+  <script >
+    function formss(){
+      let a = document.getElementById("n").value;
+      let b = document.getElementById("e").value;
+      let c = document.getElementById("p").value;
+      let d = document.getElementById("c").checked;
+
+      if(a==""){
+        alert("enter your name");
+
+      }
+      else if(b==""){
+        alert("enter your mail");
+
+      }
+      else if(c==""){
+        alert("enter your password");
+      }
+      else if(d==false){
+        alert("accept")
+      }
+    }
+  </script>
+</body>
+</html>
